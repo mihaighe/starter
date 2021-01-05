@@ -7,6 +7,7 @@ const ColorScreen = () => {
   return (
     <View>
       <Button
+        color="black"
         title="Add a Color"
         onPress={() => {
           setColors([...colors, randomRgb()]);

@@ -29,7 +29,11 @@ const SquareScreen = () => {
   const { red, green, blue } = state;
 
   return (
-    <View>
+    <View style={{
+      flex: 1,
+      alignItems: "center",
+      marginTop: 100,
+    }}>
       <ColorCounter
         onIncrease={() =>
           dispatch({ type: "change_red", payload: COLOR_INCREMENT })
@@ -37,17 +41,21 @@ const SquareScreen = () => {
         onDecrease={() =>
           dispatch({ type: "change_red", payload: -1 * COLOR_INCREMENT })
         }
-        color="Red"
+        color="RED"
       />
+      <View style={{ height: 20 }}></View>
       <ColorCounter
+       
         onIncrease={() =>
           dispatch({ type: "change_green", payload: COLOR_INCREMENT })
         }
         onDecrease={() =>
           dispatch({ type: "change_green", payload: -1 * COLOR_INCREMENT })
         }
-        color="Green"
+        color="GREEN"
       />
+      <View style={{ height: 20 }}></View>
+
       <ColorCounter
         onIncrease={() =>
           dispatch({ type: "change_blue", payload: COLOR_INCREMENT })
@@ -55,10 +63,13 @@ const SquareScreen = () => {
         onDecrease={() =>
           dispatch({ type: "change_blue", payload: -1 * COLOR_INCREMENT })
         }
-        color="Blue"
+        color="BLUE"
       />
+      <View style={{ height: 20 }}></View>
+
       <View
         style={{
+          alignSelf: 'center',
           height: 150,
           width: 150,
           backgroundColor: `rgb(${red}, ${green}, ${blue})`,
@@ -68,6 +79,11 @@ const SquareScreen = () => {
   );
 };
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  width: {
+
+    marginTop: 50,
+  },
+});
 
 export default SquareScreen;

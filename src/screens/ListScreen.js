@@ -3,16 +3,24 @@ import { View, Text, StyleSheet, FlatList } from "react-native";
 
 const ListScreen = () => {
   const friends = [
-    { name: "Friend 1", age: 20 },
-    { name: "Friend 2", age: 22 },
-    { name: "Friend 3", age: 25 },
-    { name: "Friend 4", age: 28 },
-    { name: "Friend 5", age: 29 },
-    { name: "Friend 6", age: 27 },
-    { name: "Friend 7", age: 28 },
-    { name: "Friend 8", age: 21 },
-    { name: "Friend 9", age: 16 },
-    { name: "Friend 10", age: 11 },
+    { name: "Balloon", emoji: '🎈' },
+    { name: "Bomb", emoji: '💣' },
+    { name: "Brick", emoji: '🧱' },
+    { name: "Watch", emoji: '⌚' },
+    { name: "Gem", emoji: '💎' },
+    { name: "Telephone", emoji: '📞' },
+    { name: "Mouse", emoji: '🖱️' },
+    { name: "Bulb", emoji: '💡' },
+    { name: "Book", emoji: '📗' },
+    { name: "Money", emoji: '💰' },
+    { name: "Pen", emoji: '✒️' },
+    { name: "Magnet", emoji: '🧲' },
+    { name: "Pill", emoji: '💊' },
+    { name: "Shield", emoji: '🛡️' },
+    { name: "Paperclip", emoji: '📎' },
+    { name: "Owl", emoji: '🦉' },
+
+
   ];
   return (
     <FlatList
@@ -21,7 +29,7 @@ const ListScreen = () => {
       renderItem={({ item }) => {
         return (
           <Text style={styles.textStyle}>
-            {item.name} - Age {item.age}
+            {item.name} {item.emoji}
           </Text>
         );
       }}
@@ -31,7 +39,10 @@ const ListScreen = () => {
 
 const styles = StyleSheet.create({
   textStyle: {
-    marginVertical: 50,
+    flex: 1,
+    marginVertical: 20,
+    textAlign: "center",
+    fontSize: 20,
   },
 });
 

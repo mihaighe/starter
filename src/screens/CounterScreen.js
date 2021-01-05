@@ -18,6 +18,7 @@ const CounterScreen = () => {
   return (
     <View>
       <Button
+        color='#000000'
         title="Increase"
         onPress={() => dispatch({ type: "increase_counter", payload: PAYLOAD })}
       />
@@ -25,11 +26,15 @@ const CounterScreen = () => {
         title="Decrease"
         onPress={() => dispatch({ type: "decrease_counter", payload: PAYLOAD })}
       />
-      <Text>Current Count: {state.counter}</Text>
+      <Text style={styles.text}>Current Count: {state.counter}</Text>
     </View>
   );
 };
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  text: {
+    fontSize: 20
+  }
+});
 
 export default CounterScreen;

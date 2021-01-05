@@ -7,24 +7,25 @@ const ImageScreen = () => {
   return (
     <View>
       <ImageDetail
-        title="Forest"
-        imageSource={require("../../assets/forest.jpg")}
-        imageScore={5}
+        title="Vash"
+        imageSource={require("../../assets/vash.gif")}
+        imageScore={8}
+      />
+
+      <ImageDetail
+        title="Ryuk"
+        imageSource={require("../../assets/ryuk.gif")}
+        imageScore={7}
       />
       <ImageDetail
-        title="Beach"
-        imageSource={require("../../assets/beach.jpg")}
-        imageScore={6}
-      /> 
-      <ImageDetail
-        title="Mountain"
-        imageSource={require("../../assets/mountain.jpg")}
-        imageScore={7}
+        title="Shiki"
+        imageSource={require("../../assets/shiki.gif")}
+        imageScore={9}
       />
     </View>
   );
 };
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create();
 
 export default ImageScreen;
